@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Submarine", "Submarine\Subm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_Sonar", "1_Sonar1\1_Sonar.csproj", "{08AAD59B-2CE2-4678-A39B-7C2882DF06FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dive", "Dive\Dive.csproj", "{39061063-32A8-433C-AA7D-7761CC0E5360}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_Dive", "Dive\1_Dive.csproj", "{39061063-32A8-433C-AA7D-7761CC0E5360}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubmarineGeneralTest", "SubmarineGeneralTest\SubmarineGeneralTest.csproj", "{95A310A4-92F3-4539-8139-81F19EB88C06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{39061063-32A8-433C-AA7D-7761CC0E5360}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39061063-32A8-433C-AA7D-7761CC0E5360}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39061063-32A8-433C-AA7D-7761CC0E5360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95A310A4-92F3-4539-8139-81F19EB88C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95A310A4-92F3-4539-8139-81F19EB88C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95A310A4-92F3-4539-8139-81F19EB88C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95A310A4-92F3-4539-8139-81F19EB88C06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

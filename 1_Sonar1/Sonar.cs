@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 
 
-namespace _1_Sonar1
+namespace _1_Sonar
 {
     public class Sonar
     {
@@ -16,7 +16,7 @@ namespace _1_Sonar1
             int? lastValue = null;
             int increasedCounter = 0;
 
-            List<int> inputList = new();
+            List<int> inputList = new List<int>();
 
             foreach (string line in System.IO.File.ReadLines(@"Day1Input.txt"))
             {

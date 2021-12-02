@@ -5,4 +5,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="DivingParameter.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DivingParameter.txt" />
+  </ItemGroup>
 </Project>
