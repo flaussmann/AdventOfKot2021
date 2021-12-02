@@ -2,16 +2,21 @@
 using _Dive;
 using System;
 
-namespace SubmarineGeneralTest;
-
-[TestClass]
-public class DivingTest
+namespace SubmarineGeneralTest
 {
-    [TestMethod]
-    public void CalulateDiving()
+
+
+
+    [TestClass]
+    public class DivingTest
     {
-        var divingService = new DivingService();
-     var position =   divingService.MultiplyPositions();
-        Console.WriteLine(position);
+        [TestMethod]
+        public void CalulateDiving()
+        {
+            var divingService = new DivingService();
+            var position = divingService.MultiplyPositions(new string[1]);
+            Console.WriteLine(position);
+        }
     }
+
 }

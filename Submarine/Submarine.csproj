@@ -19,4 +19,10 @@
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\sample-data\DivingParameter.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\sample-data\DivingParameter.txt" />
+  </ItemGroup>
 </Project>

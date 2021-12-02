@@ -22,10 +22,10 @@ namespace _Dive
         {
             var upDownNumber = int.Parse(upDown.Substring(upDown.Count() - 1));
 
-            if (upDown.Equals(_up))
-                return upDownNumber;
+            if (upDown.Contains(_up))
+                return upDownNumber * -1;
 
-            return upDownNumber * -1;
+            return upDownNumber;
         }
 
     }

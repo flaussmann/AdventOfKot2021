@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using Dive;
 
@@ -11,24 +12,24 @@ namespace _Dive
             
         }
 
-        public int MultiplyPositions()
+        public int MultiplyPositions(string[] listOfOperations)
         {
             var horizontalPosition = 0;
             var depth = 0;
-
-            foreach (string line in System.IO.File.ReadLines(@"DivingParameter.txt"))
-            {
                 var humanInterface = new DivingInstructionHumanInterface();
                 var divingController = new DivingController();
 
-                switch (line)
+            foreach (string operation in listOfOperations)
+            {
+                var commandPrefix = operation.Substring(0, operation.Count() - 1).Trim();
+                switch (commandPrefix)
                 {
                     case DivingInstructionHumanInterface._forward:
-                        horizontalPosition = divingController.AddForward(humanInterface.ReturnForwardPosition(line));
+                        horizontalPosition = divingController.AddForward(humanInterface.ReturnForwardPosition(operation));
                             break;
                        
                     default:
-                        depth = divingController.UpDown(humanInterface.ReturnUpDownValue(line));
+                        depth = divingController.UpDown(humanInterface.ReturnUpDownValue(operation));
                         break;
                 }
             }
