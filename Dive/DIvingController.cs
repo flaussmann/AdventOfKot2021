@@ -5,18 +5,22 @@ namespace Dive
     public class DivingController
     {
         private int _depth = 0;
-        private int _trust = 0;
+        private int _aim = 0;
+        private int horizontalPosition = 0;
 
         public int UpDown(int value)
         {
-            _depth += value;
+        
+                _aim += value;
+           
             return _depth;
         }
 
-        public int AddForward(int value)
+        public (int horizontalPosition, int depth) AddForward(int value)
         {
-            _trust += value;
-            return _trust;
+            horizontalPosition += value;
+            _depth += _aim * value;
+            return (horizontalPosition,_depth);
         }
     }
 }

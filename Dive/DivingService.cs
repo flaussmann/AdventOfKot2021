@@ -14,8 +14,8 @@ namespace _Dive
 
         public int MultiplyPositions(string[] listOfOperations)
         {
-            var horizontalPosition = 0;
-            var depth = 0;
+            (int horizontalPosition, int depth) positions = (0, 0);
+      
                 var humanInterface = new DivingInstructionHumanInterface();
                 var divingController = new DivingController();
 
@@ -25,16 +25,16 @@ namespace _Dive
                 switch (commandPrefix)
                 {
                     case DivingInstructionHumanInterface._forward:
-                        horizontalPosition = divingController.AddForward(humanInterface.ReturnForwardPosition(operation));
+                        positions = divingController.AddForward(humanInterface.ReturnForwardPosition(operation));
                             break;
                        
                     default:
-                        depth = divingController.UpDown(humanInterface.ReturnUpDownValue(operation));
+                        divingController.UpDown(humanInterface.ReturnUpDownValue(operation));
                         break;
                 }
             }
 
-            return horizontalPosition * depth;
+            return positions.horizontalPosition * positions.depth;
         }
         
     }
